@@ -1,0 +1,28 @@
+.center {
+    display: flex;
+    background-color: #ff1124;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  
+  .center h1{
+    align-self: center;
+  }
+  #contentwrapper{
+    float: left;
+    width: 100%;
+    border-color: black;
+    border: black;
+  }
+
+  #contentcolumn{
+    margin: 0 200px 0 200px;
+
+  }
+
+  .innertext{
+    margin: 20px;
+    text-justify: distribute-all-lines;
+    
+  }
