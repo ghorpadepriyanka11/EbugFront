@@ -23,6 +23,8 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { CustomerDashboardComponent } from './pages/customer/customer-dashboard/customer-dashboard.component';
 import { StaffDashboardComponent } from './pages/staff/staff-dashboard/staff-dashboard.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     MatSnackBarModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule,
+   
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
