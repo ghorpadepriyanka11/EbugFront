@@ -14,27 +14,8 @@
         <!--{{user | json}}-->
 
         <form (ngSubmit)="formSubmit()" >
-          <!--username field-->
-          <mat-form-field class="full-width" appearance="outline">
-            <mat-label>User Name</mat-label>
-            <input 
-            required
-            [(ngModel)]="user.username"
-            name="username"
-            matInput 
-            placeholder="Enter here">
-            <mat-hint>Username must be unique !!</mat-hint>
-          </mat-form-field>
-
-          <!--password field-->
-          <mat-form-field class="full-width" appearance="outline">
-            <mat-label>User Password</mat-label>
-            <input
-            required
-            [(ngModel)]="user.password"
-            name="password"
-            type="password" matInput placeholder="Enter here">
-          </mat-form-field>
+        
+        
 
           <!--firstname field-->
           <mat-form-field class="full-width" appearance="outline">
@@ -66,16 +47,7 @@
             type="email" matInput placeholder="Enter here">
           </mat-form-field>
 
-          <!--phone number field-->
-          <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Phone Number</mat-label>
-            <input
-            required
-            [(ngModel)]="user.phone"
-            name="phone"
-            type="number" matInput placeholder="Enter here">
-          </mat-form-field>
-
+         
           <div class="conatiner text-center">
 
             <button type="submit" mat-raised-button color="primary">Register</button>
