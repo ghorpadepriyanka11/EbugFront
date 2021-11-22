@@ -26,6 +26,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { BugdetailsComponent } from './pages/admin/bugdetails/bugdetails.component';
+import { BuglistComponent } from './pages/admin/buglist/buglist.component';
+import { NewbuglistComponent } from './pages/admin/newbuglist/newbuglist.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { BugdetailsComponent } from './pages/admin/bugdetails/bugdetails.compone
     CustomerDashboardComponent,
     StaffDashboardComponent,
     AboutUsComponent,
-    BugdetailsComponent
+    BugdetailsComponent,
+    BuglistComponent,
+    NewbuglistComponent
   ],
   imports: [
     BrowserModule,

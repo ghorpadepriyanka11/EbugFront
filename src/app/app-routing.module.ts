@@ -12,6 +12,7 @@ import { StaffGuard } from './services/staff.guard';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { PageNotFoundComponent } from './PageNotFound.component';
 import { BugdetailsComponent } from './pages/admin/bugdetails/bugdetails.component';
+import { BuglistComponent } from './pages/admin/buglist/buglist.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -28,7 +29,7 @@ const routes: Routes = [
    // canActivate:[CustomerGuard], 
    },
    {    path: 'bugdetails',    component: BugdetailsComponent,    pathMatch: 'full',  },
-
+   {    path: 'buglist',    component: BuglistComponent,    pathMatch: 'full',  },
    {    path: '**',    component: PageNotFoundComponent}
 
 ];

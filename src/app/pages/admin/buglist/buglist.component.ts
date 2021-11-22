@@ -11,11 +11,12 @@ export class Bug {
 }
 
 @Component({
-  selector: 'app-bugdetails',
-  templateUrl: './bugdetails.component.html',
-  styleUrls: ['./bugdetails.component.css']
+  selector: 'app-buglist',
+  templateUrl: './buglist.component.html',
+  styleUrls: ['./buglist.component.css']
 })
-export class BugdetailsComponent implements OnInit {
+export class BuglistComponent implements OnInit {
+
   bugs: Bug[]
   // page:number=1
 
@@ -23,12 +24,12 @@ export class BugdetailsComponent implements OnInit {
 
   ngOnInit(): void {
     // this.bugS.getBug().subscribe(data=>this.Bug=data);
-    this.getBug();
+    this.getBug1();
   }
 
 
-  getBug() {
-    this.bugS.retriveBug().subscribe(response => {
+  getBug1() {
+    this.bugS.retriveBug1().subscribe(response => {
 
       console.log(response);
       this.bugs = response;
@@ -36,4 +37,3 @@ export class BugdetailsComponent implements OnInit {
     })
   }
 }
-

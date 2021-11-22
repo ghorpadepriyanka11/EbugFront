@@ -2,15 +2,16 @@
     width: 100%;
     color: aqua;
     border-color: aqua;
-
+    margin-left: 0px;
+    margin-top: 10px;
   }
-  
+/*   
    .mat-column-demo-position {
     width: 32px;
     border-right: 1px solid currentColor;
     padding-right: 24px;
     text-align: center;
-  }
+  } */
   
   /*.mat-column-demo-name {
     padding-left: 16px;

@@ -1,23 +1,22 @@
 <div class="container">
-    <div class="row mt20">
-        <div class="col-md-6 offset-md-3 text-center">
-            <h1><b>WELCOME TO ADMIN DASHBOARD</b></h1>
+
+
+            <h1 class="text-center" ><b>WELCOME TO ADMIN DASHBOARD</b></h1>
 
             <mat-toolbar color="success">
-                <a routerLink="/" mat-raised-button color="accent" button class="ml20 mr20">  Home </a>
+                <a routerLink="/newbug" mat-raised-button color="accent" button class="ml20 mr20">  Home </a>
                 <a [routerLink]="'/newbug'" mat-raised-button color="accent" button class="ml20 mr20">New Bug</a>
                 <a [routerLink]="'/bugdetails'" button class="ml20 mr20" mat-raised-button color="accent">In Process</a>
-                <a [routerLink]="'/'" button class="ml20 mr20" mat-raised-button color="accent" routerLink="signup">Completed</a>
+                <a [routerLink]="'/buglist'" button class="ml20 mr20" mat-raised-button color="accent" >Completed</a>
                 <a routerLink="/admin/addStaff" mat-raised-button color="accent" button class="ml20 mr20">Add Staff </a>
-                <a routerLink="/" mat-raised-button color="accent" button class="ml20 mr20"> Assign Bug </a>
-                <a routerLink="/" mat-raised-button color="accent" button class="ml20 mr20">  Send Message </a>
-                <a routerLink="/" mat-raised-button color="accent" button class="ml20 mr20">  Home </a>
+                <a routerLink="/newbug" mat-raised-button color="accent" button class="ml20 mr20"> Assign Bug </a>
+                <a routerLink="/newbug" mat-raised-button color="accent" button class="ml20 mr20">  Send Message </a>
+                <a routerLink="/newbug" mat-raised-button color="accent" button class="ml20 mr20">  Home </a>
 
                 
               </mat-toolbar>
 
               <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>
-    </div>
+      
 </div>
 
