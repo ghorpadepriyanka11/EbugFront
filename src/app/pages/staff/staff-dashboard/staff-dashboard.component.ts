@@ -2,23 +2,25 @@ import { Component, OnInit } from '@angular/core';
 
 
 export interface PeriodicElement {
-  name: string;
+  userid: number;
   position: number;
   weight: number;
   symbol: string;
+  bugdescription:string;
+  priority:string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 1, userid: 1, weight: 10001, symbol: 'API', bugdescription: 'API Issue', priority:'Low' },
+  {position: 2, userid: 2, weight: 10002, symbol: 'SYSTEM', bugdescription: 'SYSTEM Issue', priority:'High'},
+  {position: 3, userid: 3, weight: 10003, symbol: 'URL' , bugdescription: 'URL Issue', priority:'Medium'},
+  {position: 4, userid: 4, weight: 10004, symbol: 'API', bugdescription: 'API Issue', priority:'Low'},
+  {position: 5, userid: 5, weight: 10005, symbol: 'SYSTEM' , bugdescription: 'SYSTEM Issue', priority:'High'},
+  {position: 6, userid: 6, weight: 10006, symbol: 'API' , bugdescription: 'API Issue', priority:'Low'},
+  {position: 7, userid: 7, weight: 10007, symbol: 'SYSTEM' , bugdescription: 'SYSTEM Issue', priority:'Medium'},
+  {position: 8, userid: 8, weight: 10008, symbol: 'URL' , bugdescription: 'URL Issue', priority:'High'},
+  {position: 9, userid: 9, weight: 10009, symbol: 'API' , bugdescription: 'API Issue', priority:'Low'},
+  {position: 10, userid: 10, weight: 10010, symbol: 'SYSTEM' , bugdescription: 'SYSTEM Issue', priority:'Medium'},
 ];
 @Component({
   selector: 'app-staff-dashboard',
@@ -26,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./staff-dashboard.component.css']
 })
 export class StaffDashboardComponent implements OnInit {
-  displayedColumns: string[] = ['demo-position', 'demo-name', 'demo-weight', 'demo-symbol'];
+  displayedColumns: string[] =  ['demo-position', 'demo-userid', 'demo-weight', 'demo-symbol', 'demo-bugdescription','demo-priority'];
   dataSource = ELEMENT_DATA;
 
   constructor() { }

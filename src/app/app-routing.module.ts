@@ -11,6 +11,8 @@ import { CustomerGuard } from './services/customer.guard';
 import { StaffGuard } from './services/staff.guard';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { PageNotFoundComponent } from './PageNotFound.component';
+import { BugdetailsComponent } from './pages/admin/bugdetails/bugdetails.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   {    path: 'signup',    component: SignupComponent,    pathMatch: 'full',  },
@@ -25,8 +27,9 @@ const routes: Routes = [
   {    path: 'customer-dashboard',    component: CustomerDashboardComponent,    pathMatch: 'full',   
    // canActivate:[CustomerGuard], 
    },
+   {    path: 'bugdetails',    component: BugdetailsComponent,    pathMatch: 'full',  },
 
-   {    path: '**',    component: PageNotFoundComponent},
+   {    path: '**',    component: PageNotFoundComponent}
 
 ];
 
@@ -35,3 +38,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+// export const routingComponent=[BugdetailsComponent];

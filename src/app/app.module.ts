@@ -25,6 +25,8 @@ import { StaffDashboardComponent } from './pages/staff/staff-dashboard/staff-das
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import { BugdetailsComponent } from './pages/admin/bugdetails/bugdetails.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import {MatTableModule} from '@angular/material/table';
     DashboardComponent,
     CustomerDashboardComponent,
     StaffDashboardComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    BugdetailsComponent
   ],
   imports: [
     BrowserModule,
