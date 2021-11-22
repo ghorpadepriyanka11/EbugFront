@@ -24,7 +24,7 @@ import { CustomerDashboardComponent } from './pages/customer/customer-dashboard/
 import { StaffDashboardComponent } from './pages/staff/staff-dashboard/staff-dashboard.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -53,6 +53,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatToolbarModule,
     MatIconModule,
     MatSelectModule,
+    MatTableModule,
+    
    
   ],
   providers: [authInterceptorProviders],

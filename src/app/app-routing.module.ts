@@ -10,49 +10,23 @@ import { AdminGuard } from './services/admin.guard';
 import { CustomerGuard } from './services/customer.guard';
 import { StaffGuard } from './services/staff.guard';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { PageNotFoundComponent } from './PageNotFound.component';
 const routes: Routes = [
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  {    path: 'signup',    component: SignupComponent,    pathMatch: 'full',  },
+  {    path: 'about-us',    component: AboutUsComponent,    pathMatch: 'full',  },
+  {    path: 'login',    component: LoginComponent,    pathMatch: 'full',  },
+  {    path: 'admin',    component: DashboardComponent,    pathMatch: 'full',
+      // canActivate:[AdminGuard],
+      },
+  {    path: 'staff-dashboard',    component: StaffDashboardComponent,    pathMatch: 'full',
+    // canActivate:[StaffGuard],  
+  },
+  {    path: 'customer-dashboard',    component: CustomerDashboardComponent,    pathMatch: 'full',   
+   // canActivate:[CustomerGuard], 
+   },
 
-  {
-    path:'',
-    component:HomeComponent,
-    pathMatch:'full',
-  }, 
-  {
-    path:'signup',
-    component:SignupComponent,
-    pathMatch:'full',
-  }, 
-  {
-    path:'about-us',
-    component:AboutUsComponent,
-    pathMatch:'full',
-  }, 
-  {
-    path:'login',
-    component:LoginComponent,
-    pathMatch:'full', 
-  }, 
-
-  {
-    path:'admin',
-    component:DashboardComponent,
-    pathMatch:'full', 
-    // canActivate:[AdminGuard],
-  }, 
-  {
-    path:'staff-dashboard',
-    component:StaffDashboardComponent,
-    pathMatch:'full', 
-    // canActivate:[StaffGuard],
-  }, 
-  {
-    path:'customer-dashboard',
-    component:CustomerDashboardComponent,
-    pathMatch:'full', 
-    // canActivate:[CustomerGuard],
-  }, 
-
-
+   {    path: '**',    component: PageNotFoundComponent},
 
 ];
 
