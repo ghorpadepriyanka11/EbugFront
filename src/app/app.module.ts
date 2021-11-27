@@ -28,6 +28,9 @@ import {MatTableModule} from '@angular/material/table';
 import { BugdetailsComponent } from './pages/admin/bugdetails/bugdetails.component';
 import { BuglistComponent } from './pages/admin/buglist/buglist.component';
 import { NewbuglistComponent } from './pages/admin/newbuglist/newbuglist.component';
+import { AddstaffComponent } from './pages/admin/addstaff/addstaff.component';
+import { AssignbugsComponent } from './pages/admin/assignbugs/assignbugs.component';
+import { SendmsgComponent } from './pages/admin/sendmsg/sendmsg.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { NewbuglistComponent } from './pages/admin/newbuglist/newbuglist.compone
     AboutUsComponent,
     BugdetailsComponent,
     BuglistComponent,
-    NewbuglistComponent
+    NewbuglistComponent,
+    AddstaffComponent,
+    AssignbugsComponent,
+    SendmsgComponent
   ],
   imports: [
     BrowserModule,

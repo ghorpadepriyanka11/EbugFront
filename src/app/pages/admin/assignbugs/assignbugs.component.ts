@@ -1,36 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UserService } from 'src/app/services/user.service';
-import Swal from 'sweetalert2';
-
-
+import { AdminService } from 'src/app/services/admin.service';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-assignbugs',
+  templateUrl: './assignbugs.component.html',
+  styleUrls: ['./assignbugs.component.css']
 })
-export class SignupComponent implements OnInit {
+export class AssignbugsComponent implements OnInit {
 
-  constructor(private userService: UserService, private snack: MatSnackBar) { }
+  bugid:any
+  staffid:any
+
+  constructor(private adminService: AdminService, private snack: MatSnackBar) { }
 
 
-  public user = {
-
-    fname: '',
-    lname: '',
-    emailid: '',
+  public bug2 = {
+    bugid:'',
+    staffid:''
+    
   };
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {this.bugid=this.bugid }
 
 
   formSubmit() {
     //validate
 
     //addUser:userservice
-    this.userService.addUser(this.user).subscribe(
+    this.adminService.assignBug(this.bug2,this.bugid,this.staffid).subscribe(
       (data: any) => {
         //success
         console.log(data);

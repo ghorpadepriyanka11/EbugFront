@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UserService } from 'src/app/services/user.service';
-import Swal from 'sweetalert2';
-
+import { Router } from '@angular/router';
+import { AdminService } from 'src/app/services/admin.service';
 
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-addstaff',
+  templateUrl: './addstaff.component.html',
+  styleUrls: ['./addstaff.component.css']
 })
-export class SignupComponent implements OnInit {
+export class AddstaffComponent implements OnInit {
 
-  constructor(private userService: UserService, private snack: MatSnackBar) { }
+  constructor(private adminService: AdminService, private snack: MatSnackBar, private router:Router) { }
 
 
-  public user = {
+  public staff = {
 
     fname: '',
     lname: '',
@@ -30,10 +29,11 @@ export class SignupComponent implements OnInit {
     //validate
 
     //addUser:userservice
-    this.userService.addUser(this.user).subscribe(
+    this.adminService.addStaff(this.staff).subscribe(
       (data: any) => {
         //success
         console.log(data);
+        this.router.navigate(['admin'])
         //alert("success");
         // Swal.fire('Successfully done !!', 'User id is ' + data.id, 'success');
       }

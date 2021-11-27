@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { CustomerService } from 'src/app/services/customer.service';
 
 interface Bug {
   value: string;
@@ -11,10 +12,6 @@ interface Priority {
   viewValue: string;
 }
 
-
-
-
-
 @Component({
   selector: 'app-customer-dashboard',
   templateUrl: './customer-dashboard.component.html',
@@ -23,22 +20,64 @@ interface Priority {
 export class CustomerDashboardComponent implements OnInit {
 
   Bugs: Bug[] = [
-    {value: 'ISSUE-0', viewValue: 'API ISSUE'},
-    {value: 'ISSUE-1', viewValue: 'URL ISSUE'},
-    {value: 'ISSUE-2', viewValue: 'SYSTEM LEVEL'},
+    {value: 'API_ISSUE', viewValue: 'API ISSUE'},
+    {value: 'URL_ISSUE', viewValue: 'URL ISSUE'},
+    {value: 'SYSTEM_ISSUE', viewValue: 'SYSTEM LEVEL'},
   ];
 
   Priorities: Priority[] = [
-    {value: 'ISSUE-3', viewValue: 'LOW'},
-    {value: 'ISSUE-4', viewValue: 'MEDIUM'},
-    {value: 'ISSUE-5', viewValue: 'HIGH'},
+    {value: 'LOW', viewValue: 'LOW'},
+    {value: 'MEDIUM', viewValue: 'MEDIUM'},
+    {value: 'HIGH', viewValue: 'HIGH'},
   ];
 
+  constructor(private customerService: CustomerService, private snack: MatSnackBar) { }
 
-  constructor() { }
-  
+
+  public ticket = {
+
+    title: '',
+    type: '',
+    priority: '',
+    discription: '',
+  };
 
   ngOnInit(): void {
   }
+
+
+  formSubmit() {
+    //validate
+
+    //addUser:userservice
+    this.customerService.addTicket(this.ticket).subscribe(
+      (data: any) => {
+        //success
+        console.log(data);
+        //alert("success");
+        // Swal.fire('Successfully done !!', 'User id is ' + data.id, 'success');
+      }
+      
+      // , (error) => {
+      //   error
+      //   console.log(error);
+        //alert("something went wrong");
+        // this.snack.open("Something went wrong !!",'',{
+        // duration:3000,
+
+        // }
+
+        // );
+    // }
+
+    );
+
+  }
+
+
+
+
+
+
 
 }
